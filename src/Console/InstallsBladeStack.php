@@ -10,19 +10,24 @@ trait InstallsBladeStack
     protected function installBladeStack()
     {
         //  Setup components directory in app/Path
-        $appComponentsDir = app_path('View/Components');
-        if (!(new Filesystem)->isDirectory($appComponentsDir)) {
-            (new Filesystem)->makeDirectory($appComponentsDir, 0755, true);
+        if (!(new Filesystem)->isDirectory(app_path('View/Components'))) {
+            (new Filesystem)->makeDirectory(app_path('View/Components'), 0755, true);
         }
-        (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/default/app/Components', $appComponentsDir);
+        (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/default/app/Components', app_path('View/Components'));
 
 
         //  Setup component views directory in resources/views
-        $resourceViewsDir = resource_path('views/components');
-        if (!(new Filesystem)->isDirectory($resourceViewsDir)) {
-            (new Filesystem)->makeDirectory($resourceViewsDir, 0755, true);
+        if (!(new Filesystem)->isDirectory(resource_path('views/components'))) {
+            (new Filesystem)->makeDirectory(resource_path('views/components'), 0755, true);
         }
 
-        (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/default/resources/views/components', $resourceViewsDir);
+        (new Filesystem)->copyDirectory(__DIR__ . '/../../stubs/default/resources/views/components', resource_path('views/components'));
+
+        //  Setup themes directory in resources/views
+        if (!(new Filesystem)->isDirectory(resource_path('views/themes'))) {
+            (new Filesystem)->makeDirectory(resource_path('views/themes'), 0755, true);
+        }
+
+        (new Filesystem)->copy(__DIR__ . '/../../stubs/config/dream.php', config_path('dream.php'));
     }
 }

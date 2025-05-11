@@ -4,6 +4,9 @@ namespace Fitenson\Dream;
 
 use Illuminate\Support\ServiceProvider;
 use Fitenson\Dream\Console\InstallsCommand;
+use Illuminate\Support\Facades\Blade;
+
+use Fitenson\Dream\View\Components\Button;
 
 
 class DreamServiceProvider extends ServiceProvider
@@ -20,6 +23,8 @@ class DreamServiceProvider extends ServiceProvider
                 InstallsCommand::class
             ]);
         }
+
+        Blade::component('dream-button', Button::class);
     }
 
 

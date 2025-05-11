@@ -1,6 +1,6 @@
 <?php
 
-namespace SDream\View\Components;
+namespace App\View\Components;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -20,6 +20,6 @@ class Label extends Component
 
     public function render(): View|Closure|string
     {
-        return view('s-dream::welcome');
+        return view('components.label');
     }
 }
