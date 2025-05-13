@@ -1,8 +1,13 @@
-{{-- @php
-    $theme = config("dream.theme.button.$style", '');
-    $classes = $theme['button'][$style] ?? $theme['button']['primary'];
-@endphp --}}
+@props([
+    'style' => 'primary', // default style
+])
 
-<button {{ $attributes->merge(['class' => "px-4 py-2 font-medium rounded"]) }}>
+@php
+    $theme = config("dream.button.$style");
+@endphp
+
+<button {{ $attributes->merge([
+    'class' => "text-sm sm:text-base px-3 sm:px-4 py-2 sm:py-3 font-medium rounded $theme"
+]) }}>
     {{ $slot }}
 </button>
