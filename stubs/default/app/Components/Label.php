@@ -10,12 +10,10 @@ use Illuminate\View\Component;
 class Label extends Component
 {
     public string $for;
-    public string $text;
 
-    public function __construct(string $for, string $text)
+    public function __construct(string $for)
     {
         $this->for = $for;
-        $this->text = $text;
     }
 
     public function render(): View|Closure|string

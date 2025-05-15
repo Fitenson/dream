@@ -10,6 +10,7 @@ use App\View\Components\Button;
 use App\View\Components\Label;
 use App\View\Components\Text;
 use App\View\Components\Title;
+use App\View\Components\Card;
 
 
 class DreamServiceProvider extends ServiceProvider
@@ -31,6 +32,7 @@ class DreamServiceProvider extends ServiceProvider
         Blade::component('dream-label', Label::class);
         Blade::component('dream-text', Text::class);
         Blade::component('dream-title', Title::class);
+        Blade::component('dream-card', Card::class);
     }
 
 
