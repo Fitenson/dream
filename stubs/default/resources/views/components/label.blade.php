@@ -1,3 +1,5 @@
-<label for="{{ $for }}" class="block text-sm font-medium text-gray-700">
-    {{ $text }}
+<label for="{{ $for }}" {{ $attributes->merge([
+    'block',
+]) }}>
+    {{ $slot }}
 </label>

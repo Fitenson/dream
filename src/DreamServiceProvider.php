@@ -6,7 +6,10 @@ use Illuminate\Support\ServiceProvider;
 use Fitenson\Dream\Console\InstallsCommand;
 use Illuminate\Support\Facades\Blade;
 
-use Fitenson\Dream\View\Components\Button;
+use App\View\Components\Button;
+use App\View\Components\Label;
+use App\View\Components\Text;
+use App\View\Components\Title;
 
 
 class DreamServiceProvider extends ServiceProvider
@@ -25,6 +28,9 @@ class DreamServiceProvider extends ServiceProvider
         }
 
         Blade::component('dream-button', Button::class);
+        Blade::component('dream-label', Label::class);
+        Blade::component('dream-text', Text::class);
+        Blade::component('dream-title', Title::class);
     }
 
 
