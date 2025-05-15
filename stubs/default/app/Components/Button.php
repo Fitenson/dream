@@ -1,13 +1,13 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Dream;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 
-class Card extends Component {
+class Button extends Component {
     public $style;
 
 
@@ -18,6 +18,6 @@ class Card extends Component {
 
     public function render(): View|Closure|string
     {
-        return view('components.card', ['style' => $this->style]);
+        return view('components.dream.button', ['style' => $this->style]);
     }
 }

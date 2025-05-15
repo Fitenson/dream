@@ -6,11 +6,11 @@ use Illuminate\Support\ServiceProvider;
 use Fitenson\Dream\Console\InstallsCommand;
 use Illuminate\Support\Facades\Blade;
 
-use App\View\Components\Button;
-use App\View\Components\Label;
-use App\View\Components\Text;
-use App\View\Components\Title;
-use App\View\Components\Card;
+use App\View\Components\Dream\Button;
+use App\View\Components\Dream\Label;
+use App\View\Components\Dream\Text;
+use App\View\Components\Dream\Title;
+use App\View\Components\Dream\Card;
 
 
 class DreamServiceProvider extends ServiceProvider

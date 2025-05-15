@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Dream;
 
 use Closure;
 use Illuminate\Contracts\View\View;
@@ -11,6 +11,6 @@ class Text extends Component
 {
     public function render(): View|Closure|string
     {
-        return view('components.text');
+        return view('components.dream.base.text');
     }
 }
