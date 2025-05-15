@@ -11,6 +11,6 @@ class Text extends Component
 {
     public function render(): View|Closure|string
     {
-        return view('components.dream.base.text');
+        return view('components.dream.text');
     }
 }

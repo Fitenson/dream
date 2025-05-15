@@ -18,6 +18,6 @@ class Label extends Component
 
     public function render(): View|Closure|string
     {
-        return view('components.dream.base.label');
+        return view('components.dream.label');
     }
 }

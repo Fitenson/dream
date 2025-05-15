@@ -1,13 +1,13 @@
 <?php
 
-namespace App\View\Components\Dream;
+namespace App\View\Components\Dream\Tabs;
 
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 
-class Card extends Component {
+class TabPanel extends Component {
     public $style;
 
 
@@ -18,6 +18,6 @@ class Card extends Component {
 
     public function render(): View|Closure|string
     {
-        return view('components.dream.card', ['style' => $this->style]);
+        return view('components.dream.tabs.tab-panel', ['style' => $this->style]);
     }
 }
